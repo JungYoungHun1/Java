@@ -5,7 +5,7 @@ public class Ex04Condition {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	     // if문) 관리자 id가 admin혹은 admin2일때 접속 성공(단, else if 사용하기)
+	     // if문) 관리자 id가 admin혹은 admin2일때 접속 성공(단, else if 사용하기)!
 	      String id = "admin2";
 	      if(id.equals("admin")) {
 	         System.out.println("접속 성공");

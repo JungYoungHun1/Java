@@ -4,7 +4,7 @@ public class Ex03Operation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 숫자 연산 : +, -, *, /, %
+		// 숫자 연산 : +, -, *, /, %...
 
 //		int v1 = 10;
 //		int v2 = 3;

@@ -3,7 +3,7 @@ package step01_syntax;
 public class Ex02Variable {
 
 	public static void main(String[] args) {
-//		ctrl + d - 한줄 삭제
+//		ctrl + d - 한줄 삭제!
 		// 타입 변수명 = 값;
 		// 기본타입(primitive) 타입
 		// 정수 : -(2^(n-1)) ~ 2^(n-1)-1 , n은 bit수

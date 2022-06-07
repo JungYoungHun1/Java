@@ -40,7 +40,7 @@ public class Ex05Loop {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// for문
-		// 5 ~ 1 출력
+		// 5 ~ 1 출력!
 //		for (int i = 5; i > 0; i--) {
 //			System.out.println(i);
 //		}

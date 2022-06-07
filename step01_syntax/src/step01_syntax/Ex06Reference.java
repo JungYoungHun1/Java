@@ -21,7 +21,7 @@ public class Ex06Reference {
 
 //		str1 = null;
 //		System.out.println(str1);
-//		System.out.println(str1.hashCode()); // NPE 발생
+//		System.out.println(str1.hashCode()); // NPE 발생!
 
 		/*
 		 * 배열 (Array): 데이터 값 여러가지를 한개의 변수에 대입 - 구조 : 타입 [] 변수명 = {요소1, 요소2, 요소3...} - 특징
