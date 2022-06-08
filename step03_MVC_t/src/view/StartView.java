@@ -14,8 +14,8 @@ public class StartView {
 //		System.out.println("=== 학생 정보 삭제 ===");
 //		StudentController.request(4);
 //		StudentController.request(2);
-//		System.out.println("=== 학생 정보 수정(한살 추가) ===");
-//		StudentController.request(5);
-		
+		System.out.println("=== 학생 정보 수정(한살 추가) ===");
+		StudentController.request(5);
+
 	}
 }

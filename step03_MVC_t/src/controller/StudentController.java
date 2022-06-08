@@ -16,36 +16,22 @@ import view.EndView;
 
 public class StudentController {
 	public static void request(int reqNumber) {
-		if(reqNumber == 1) {
-			EndView.printAll(StudentModel.getAll()); 
-		}else if(reqNumber == 2) {
+		if (reqNumber == 1) {
+			EndView.printAll(StudentModel.getAll());
+		} else if (reqNumber == 2) {
 			EndView.printOne(StudentModel.getOne("Java"));
-		}else if(reqNumber == 3) {
+		} else if (reqNumber == 3) {
 			boolean r = StudentModel.insert(new Student("Busan", 12));
-			if(r) {
+			if (r) {
 				EndView.printSuccess("등록 성공");
-			}else {
+			} else {
 				EndView.printFail("등록 실패");
 			}
-		}else if(reqNumber == 4) {
+		} else if (reqNumber == 4) {
 			StudentModel.delete("Busan");
-		}else if(reqNumber == 5) {
+		} else if (reqNumber == 5) {
 			EndView.printOne(StudentModel.updateAge("Java"));
 		}
-		
+
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
