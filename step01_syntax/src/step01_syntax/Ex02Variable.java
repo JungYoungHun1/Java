@@ -13,7 +13,7 @@ public class Ex02Variable {
 //		System.out.println(vb1);
 //		System.out.println(vb2);
 //		System.out.println(vs1);
-		
+
 //		int vi1 = 10;
 //		int vi2 = 0B1010; //2진수
 //		int vi3 = 012; //8진수
@@ -21,15 +21,15 @@ public class Ex02Variable {
 //		System.out.println(vi2);
 //		System.out.println(vi3);
 //		System.out.println(vi4);
-		
+
 //		long vl1 = 10;
 //		long vl2 = 10000000000L;
 //		System.out.println(vl2);
-		
+
 		// 실수 : float(32) double(64)
 		float vl1 = 1.1f;
 		System.out.println(vl1);
-		
+
 		// 문자 : char (16)
 		char vc1 = 'a';
 		System.out.println(vc1);
@@ -37,13 +37,11 @@ public class Ex02Variable {
 		System.out.println(vc2);
 		char vc3 = '\u0041';
 		System.out.println(vc3);
-		
+
 		// 논리 : boolean(8)
 		boolean isTrue = true;
 		boolean isFalse = false;
-		
-		
-			
+
 	}
 
 }

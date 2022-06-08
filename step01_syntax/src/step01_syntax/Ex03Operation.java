@@ -16,9 +16,9 @@ public class Ex03Operation {
 //		System.out.println(v1);
 
 		// 기본 연산
-		byte v3 = 10;
-		byte v4 = 3;
-		byte v5 = (byte) (v3 + v4);
+//		byte v3 = 10;
+//		byte v4 = 3;
+//		byte v5 = (byte) (v3 + v4);
 //		System.out.println(v5);
 
 //		System.out.println(((double)v3/v4));
@@ -26,9 +26,9 @@ public class Ex03Operation {
 //		System.out.println((5 / 0.0) + 2);
 
 		// 논리 연산 : &, |, ^, !
-
-		boolean isTrue = true;
-		boolean isFalse = false;
+//
+//		boolean isTrue = true;
+//		boolean isFalse = false;
 
 		// &, &&
 //		System.out.println(isTrue && isTrue);
@@ -43,16 +43,16 @@ public class Ex03Operation {
 //		System.out.println(!isTrue);
 
 		// 비교 연산 <, <=, >, >=, ==, !==
-		int num1 = 1;
-		int num2 = 10;
+//		int num1 = 1;
+//		int num2 = 10;
 //		System.out.println(num1 == num2);
 
-		double num3 = 1.0;
+//		double num3 = 1.0;
 //		System.out.println(num1 == num3);
 
 		// 대입 연산 += -= *= /=
-		int assign = 1;
-		assign *= 10;
+//		int assign = 1;
+//		assign *= 10;
 //		System.out.println(assign);
 
 		// 문자열(String) 연산

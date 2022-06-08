@@ -33,8 +33,6 @@
  */
 package step01_syntax;
 
-import javax.security.auth.x500.X500Principal;
-
 public class Ex05Loop {
 
 	public static void main(String[] args) {
@@ -44,16 +42,16 @@ public class Ex05Loop {
 //		for (int i = 5; i > 0; i--) {
 //			System.out.println(i);
 //		}
-		
+
 		// while문
 //		int i1 = 1;
 //		while (i1 <= 5) {
 //			System.out.println(i1);
 //			i1++;
 //		}
-		
+
 		// do - while 문
-		
+
 //		int i2 = 1;
 //		
 //		
@@ -61,18 +59,19 @@ public class Ex05Loop {
 //			System.out.println(i2);
 //			i2++;
 //		}while(i2 <=5);
-		
-		// 구구단 
-		for (int i = 2; i < 10; i++) {
-			for (int j = 1; j < 10; j++) {
-				System.out.println(i + "*" + j + "=" + i*j );
+
+		// 구구단
+		int[][] arr1 = new int[10][10];
+		for (int i = 2; i <= 9; i++) {
+			System.out.print(i + "단 [ ");
+			for (int j = 1; j <= 9; j++) {
+				arr1[i][j] = i * j;
+				System.out.print(arr1[i][j] + " ");
 			}
+			System.out.print("]");
+			System.out.println();
 		}
-		
-		
-		
-		
-		
+
 	}
 
 }

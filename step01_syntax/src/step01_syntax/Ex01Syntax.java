@@ -6,8 +6,6 @@ public class Ex01Syntax {
 		// TODO Auto-generated method stub
 		System.out.println("Hello, Java");
 		System.out.println();
-		
-		
 
 	}
 
