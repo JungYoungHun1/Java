@@ -1,6 +1,8 @@
 package step02.collection;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import model.domain.Student;
 
@@ -16,13 +18,13 @@ public class Ex01ArrayList {
 		arr1.add("Java");
 
 		// get : 원소 객체를 반환
-		System.out.println(arr1.get(0));
-		System.out.println(((Student) arr1.get(1)).getName());
+//		System.out.println(arr1.get(0));
+//		System.out.println(((Student) arr1.get(1)).getName());
 
-		System.out.println(arr1);
+//		System.out.println(arr1);
 
 		// size : 객체 수 반환
-		System.out.println(arr1.size());
+//		System.out.println(arr1.size());
 
 //		for (int i = 0; i < arr1.size(); i++) {
 //			System.out.println(arr1.get(i));
@@ -38,12 +40,38 @@ public class Ex01ArrayList {
 
 		// remove : 해당 인덱스 객체 삭제
 		arr2.remove(0);
-		System.out.println(arr2.get(0));
+//		System.out.println(arr2.get(0));
 //		arr2.add(new Student("Java", 1, "Junior"));
 
 		for (int i = 0; i < arr2.size(); i++) {
-			System.out.println(arr2.get(i));
+//			System.out.println(arr2.get(i));
+
+//			
 		}
+//		ArrayList vs LinkedList
+		List arrayList = new ArrayList();
+		List ldkList = new LinkedList();
+
+		//
+		long startTime;
+		long endTime;
+
+		startTime = System.currentTimeMillis();
+		for (int i = 0; i < 100000; i++) {
+			arrayList.add(0, i);
+//			ldkList.add(i);
+		}
+		endTime = System.currentTimeMillis();
+
+		System.out.println("ArrayList 데이터 삽입 시간은 " + (endTime - startTime));
+
+		startTime = System.currentTimeMillis();
+		for (int i = 0; i < 100000; i++) {
+//			arrayList.add(i);
+			ldkList.add(0, i);
+		}
+		endTime = System.currentTimeMillis();
+		System.out.println("LinkedList 데이터 삽입 시간은 " + (endTime - startTime));
 
 	}
 
