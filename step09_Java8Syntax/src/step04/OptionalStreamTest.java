@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+import model.domain.Person;
 
 public class OptionalStreamTest {
 
@@ -79,17 +79,57 @@ public class OptionalStreamTest {
 		// collect
 
 		List<Integer> arr4 = Arrays.asList(1, 2, 3, 3, 3, 4, 5, 5);
-		System.out.println(arr4);
-		arr4.stream().collect(Collectors.toSet()).forEach(v -> System.out.println(v));
+//		System.out.println(arr4);
+//		arr4.stream().collect(Collectors.toSet()).forEach(v -> System.out.println(v));
 
 		// reduce
-		System.out.println(arr4.stream().reduce(0, (v1, v2) -> v1 + v2));
+//		System.out.println(arr4.stream().reduce(0, (v1, v2) -> v1 + v2));
 
 		// ex.sorted
-		Arrays.asList("B", "AB", "O", "A").stream().sorted().forEach(System.out::println);
+//		Arrays.asList("B", "AB", "O", "A").stream().sorted().forEach(System.out::println);
 
 		// sum
-		System.out.println(IntStream.of(1, 5, 8, 3, 6).sum());
+//		System.out.println(IntStream.of(1, 5, 8, 3, 6).sum());
+
+		// 문제! I이고 J인 사람들만 출력하시오!
+		Person donghyun = new Person("donghyun", "intp");
+		Person yeyeong = new Person("yeyeong", "isfj");
+		Person doheon = new Person("doheon", "isfj");
+		Person minkyu = new Person("minkyu", "enfp");
+		Person yongju = new Person("yongju", "estj");
+		Person yunho = new Person("yunho", "enfp");
+		Person jeongin = new Person("jeongin", "infp");
+		Person hanju = new Person("hanju", "isfp");
+		Person seongjun = new Person("seongjun", "isfp");
+		Person uijin = new Person("uijin", "isfp");
+		Person jongheon = new Person("jongheon", "isfj");
+		Person hyunchae = new Person("hyunchae", "infj");
+		Person yeongkwang = new Person("yeongkwang", "isfp");
+		Person yeonghun = new Person("yeonghun", "esfj");
+		Person myungyun = new Person("myungyun", "enfj");
+
+		List<Person> personList = new ArrayList<Person>();
+		personList.add(donghyun);
+		personList.add(yeyeong);
+		personList.add(doheon);
+		personList.add(minkyu);
+		personList.add(yongju);
+		personList.add(yunho);
+		personList.add(jeongin);
+		personList.add(hanju);
+		personList.add(seongjun);
+		personList.add(uijin);
+		personList.add(jongheon);
+		personList.add(hyunchae);
+		personList.add(yeongkwang);
+		personList.add(yeonghun);
+		personList.add(myungyun);
+
+		personList.stream().filter(v -> v.getMbti().contains("i") && v.getMbti().contains("j"))
+				.forEach(System.out::println);
+
+//		personList.stream().filter(v -> v.getMbti().matches("^i..j$")).forEach(System.out::println);
+
 	}
 
 }
