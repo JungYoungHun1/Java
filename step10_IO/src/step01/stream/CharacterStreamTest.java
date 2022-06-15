@@ -1,6 +1,7 @@
 package step01.stream;
 
 import java.io.FileReader;
+import java.io.IOException;
 
 public class CharacterStreamTest {
 
@@ -21,15 +22,13 @@ public class CharacterStreamTest {
 		// Reader
 		try {
 			FileReader fr = new FileReader("CharacterStream.txt");
+
 			int data;
-			try {
-				while ((data = fr.read()) != -1) {
-					System.out.println((char) data);
-				}
-				fr.close();
-			} catch (Exception e) {
-				e.printStackTrace();
+			while ((data = fr.read()) != -1) {
+				System.out.println((char) data);
 			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
