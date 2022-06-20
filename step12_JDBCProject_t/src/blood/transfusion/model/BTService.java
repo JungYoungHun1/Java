@@ -64,7 +64,12 @@ public class BTService {
 	// BTProject 삭제
 	public boolean deleteBTProject(String btProjectId) throws SQLException, NotExistException {
 //		notExistBTProject(btProjectId);
-		return BTProjectDAO.deleteBTProject(btProjectId);
+
+		if (BTProjectDAO.deleteBTProject(btProjectId) == true) {
+			return true;
+		} else {
+			throw new NotExistException("삭제 불가능");
+		}
 	}
 
 	// Donor - CRUD

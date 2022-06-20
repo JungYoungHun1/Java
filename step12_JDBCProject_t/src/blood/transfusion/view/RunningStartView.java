@@ -20,8 +20,8 @@ public class RunningStartView {
 
 		// 새로운 프로젝트 저장
 		System.out.println("===== 2. 새로운 프로젝트 저장 및 확인 =====");
-		controller.insertProject(newProject, donorDTO, recipientDTO);
-		controller.BTProjects("AB-");
+//		controller.insertProject(newProject, donorDTO, recipientDTO);
+//		controller.BTProjects("AB-");
 
 		// 존재하는 프로젝트 검색
 		System.out.println("=====3. 특정 프로젝트 검색 =====");
@@ -35,12 +35,12 @@ public class RunningStartView {
 		System.out.println();
 //
 		// 존재하는 프로젝트 수정
-//		System.out.println("===== 5. 존재하는 프로젝트 수정 및 확인 =====");
-//		controller.updateProject("AB-", "응급처치11122");
-//		controller.BTProjects("AB-");
+		System.out.println("===== 5. 존재하는 프로젝트 수정 및 확인 =====");
+		controller.updateProject("AB-", "응급처치11122");
+		controller.BTProjects("AB-");
+
+		System.out.println();
 //
-//		System.out.println();
-////
 //		// 존재하지 않는 프로젝트 수정 : 예외 발생
 		System.out.println("===== 6. 존재하지 않는 프로잭트 수정 - 예외처리 확인용 =====");
 		controller.updateProject("bbb", "응급처치222");
@@ -48,8 +48,8 @@ public class RunningStartView {
 		System.out.println();
 ////
 		// 존재하는 프로젝트 삭제 및 삭제여부 확인
-		System.out.println("===== 7. 존재하는 프로젝트 삭제 및 확인 =====");
-		controller.deleteProject("AB-");
-		controller.BTProjects("AB-");
+//		System.out.println("===== 7. 존재하는 프로젝트 삭제 및 확인 =====");
+//		controller.deleteProject("AB-");
+//		controller.BTProjects("AB-");
 	}
 }

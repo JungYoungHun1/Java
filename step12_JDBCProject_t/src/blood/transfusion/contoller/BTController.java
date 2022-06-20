@@ -50,10 +50,11 @@ public class BTController {
 			service.addDonor(donorDTO);
 			service.addRecipient(recipientDTO);
 			service.addBTProject(newProject);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("저장 불가능");
 		}
+
 	}
 
 	// 특정 프로젝트 업데이트
@@ -74,21 +75,34 @@ public class BTController {
 
 	// 특정 프로젝트 삭제
 	public void deleteProject(String project) {
-		BTProjectDTO selectProject = null;
-		try {
-			selectProject = service.getBTProject(project);
-			service.deleteDonor(selectProject.getDonorId());
-			service.deleteRecipient(selectProject.getRecipientId());
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+		// 모든 테이블에서 정보 삭제
+
+//		BTProjectDTO selectProject = null;
+//		try {
+//			selectProject = service.getBTProject(project);
+//			service.deleteDonor(selectProject.getDonorId());
+//			service.deleteRecipient(selectProject.getRecipientId());
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+//		try {
+//			service.deleteBTProject(project);
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+
+		// 프로젝트만 삭제
 		try {
 			service.deleteBTProject(project);
-
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			System.out.println("삭제 완료");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+		} catch (NotExistException e) {
+			// TODO Auto-generated catch block
+			RunningEndView.showError(e.getMessage());
 		}
 
 	}
